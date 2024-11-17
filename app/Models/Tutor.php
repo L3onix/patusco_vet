@@ -10,6 +10,11 @@ class Tutor extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'email',
+    ];
+
     public function pets(): HasMany
     {
         return $this->hasMany(Pet::class);
